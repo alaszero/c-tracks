@@ -1,13 +1,38 @@
-# Entorno
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Environments
 .env
+.envrc
 .venv/
 venv/
-__pycache__/
-*.pyc
+env/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+coverage.xml
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
 
 # Node
 node_modules/
-dist/
 
 # IDE
 .vscode/
@@ -20,9 +45,14 @@ Thumbs.db
 # Docker volumes
 pgdata/
 
-# Build
-*.egg-info/
-build/
-
 # Paquetes de deploy
 *.zip
+
+# Type checkers
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+
+# Logs
+*.log
