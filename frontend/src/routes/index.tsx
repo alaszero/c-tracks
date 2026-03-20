@@ -6,6 +6,7 @@ import { ProtectedRoute } from "./ProtectedRoute";
 import Login from "@/pages/Login";
 import Dashboard from "@/pages/Dashboard";
 import Machinery from "@/pages/Machinery";
+import MachineryDetail from "@/pages/MachineryDetail";
 import Projects from "@/pages/Projects";
 import Services from "@/pages/Services";
 import Invoices from "@/pages/Invoices";
@@ -34,6 +35,14 @@ export const router = createBrowserRouter([
         element: (
           <ProtectedRoute resource="machinery">
             <Machinery />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "machinery/:id",
+        element: (
+          <ProtectedRoute resource="machinery">
+            <MachineryDetail />
           </ProtectedRoute>
         ),
       },
