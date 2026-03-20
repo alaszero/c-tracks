@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Scrollbar estilo industrial */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-neutral-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-700 rounded-full hover:bg-neutral-600;
+  }
+}
+
+@layer components {
+  /* Badge de estado */
+  .badge-operando {
+    @apply bg-success/20 text-success border border-success/30;
+  }
+  .badge-mantenimiento {
+    @apply bg-warning/20 text-warning border border-warning/30;
+  }
+  .badge-fuera-servicio {
+    @apply bg-danger/20 text-danger border border-danger/30;
+  }
+  .badge-disponible {
+    @apply bg-info/20 text-info border border-info/30;
+  }
+}
