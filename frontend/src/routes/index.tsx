@@ -8,6 +8,7 @@ import Dashboard from "@/pages/Dashboard";
 import Machinery from "@/pages/Machinery";
 import MachineryDetail from "@/pages/MachineryDetail";
 import Projects from "@/pages/Projects";
+import ProjectDetail from "@/pages/ProjectDetail";
 import Services from "@/pages/Services";
 import Invoices from "@/pages/Invoices";
 import Expenses from "@/pages/Expenses";
@@ -51,6 +52,14 @@ export const router = createBrowserRouter([
         element: (
           <ProtectedRoute resource="projects">
             <Projects />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "projects/:id",
+        element: (
+          <ProtectedRoute resource="projects">
+            <ProjectDetail />
           </ProtectedRoute>
         ),
       },
